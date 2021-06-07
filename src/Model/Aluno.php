@@ -3,11 +3,11 @@
 class Aluno
 {
     private $id; // ID de Aluno
-    private $nome;
-    private $nascimento;
-    private $telefone;
-    private $email;
-    private $genero;
+    private $nome; // Nome Completo do Aluno
+    private $nascimento; // Data de Nascimento
+    private $telefone; // Telefone 
+    private $email; // E-mail
+    private $genero; // Gênero
 
     // Funções
     public function save()
@@ -24,6 +24,10 @@ class Aluno
     }
     public function list()
     { // buscar/listar alunos do Banco de Dados
+
+    }
+    public function listTurmas()
+    { // buscar/listar turmas que o aluno está matriculado
 
     }
 

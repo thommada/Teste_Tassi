@@ -33,6 +33,7 @@
             - Uma escola deve:
                 ◦ Ter várias turmas.
                 ◦ Exibir o total de alunos.
+                
 # Tabelas Necessárias
     • Alunos
     • Turmas

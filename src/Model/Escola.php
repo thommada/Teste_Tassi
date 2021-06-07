@@ -2,10 +2,10 @@
 
 class Escola
 {
-    private $id;
-    private $nome;
-    private $endereco;
-    private $situacao;
+    private $id; // ID da Escola
+    private $nome; // Nome da Escola
+    private $endereco; // Endereço da Escola
+    private $situacao; // Situação da Escola
 
     // Funções
     public function save()
@@ -24,12 +24,16 @@ class Escola
     { // buscar/listar escolas do Banco de Dados
 
     }
-    public function listAluno()
+    public function listAlunos()
     { // buscar/listar alunos daquela escola do Banco de Dados
 
     }
     public function countAlunos()
     { // contar alunos daquela escola do Banco de Dados
+
+    }
+    public function listTurmas()
+    { // buscar/listar turmas daquela escola do Banco de Dados
 
     }
 

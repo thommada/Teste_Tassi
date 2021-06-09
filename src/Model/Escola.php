@@ -39,16 +39,12 @@ class Escola
 
     //Getters e Setters
     // ID
-    public function getId()
+    public function getId():int
     { // getter ID
         return $this->id;
     }
-    public function setId($id)
-    { // setter ID
-        $this->id = $id;
-    }
     // Nome da Escola
-    public function getnome()
+    public function getnome():string
     { // getter nome da escola
         return $this->nome;
     }
@@ -57,7 +53,7 @@ class Escola
         $this->nome = $nome;
     }
     // Endereço da Escola
-    public function getEndereco()
+    public function getEndereco():string
     { // getter endereço
         return $this->endereco;
     }
@@ -66,7 +62,7 @@ class Escola
         $this->endereco = $endereco;
     }
     // Situação
-    public function getSituacao()
+    public function getSituacao():string
     { // getter Situação
         return $this->situacao;
     }

@@ -37,7 +37,7 @@ class Turma
 
     //Getters e Setters
     //ID
-    public function getId()
+    public function getId():int
     { // getter id
         return $this->id;
     }
@@ -46,7 +46,7 @@ class Turma
         $this->id = $id;
     }
     //Ano
-    public function getAno()
+    public function getAno():int
     { // getter Ano
         return $this->ano;
     }
@@ -55,7 +55,7 @@ class Turma
         $this->ano = $ano;
     }
     //Nível de Ensino
-    public function getNivel()
+    public function getNivel():string
     { // getter Nível de Ensino
         return $this->nivel;
     }
@@ -64,7 +64,7 @@ class Turma
         $this->nivel = $nivel;
     }
     //Série
-    public function getSerie()
+    public function getSerie():string
     { // getter Série
         return $this->serie;
     }
@@ -73,7 +73,7 @@ class Turma
         $this->serie = $serie;
     }
     //Turno
-    public function getTurno()
+    public function getTurno():string
     { // getter Turno
         return $this->turno;
     }

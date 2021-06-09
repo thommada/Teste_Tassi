@@ -15,7 +15,7 @@ require_once './View/header.php';
             <div class="card-body">
                 <h5 class="card-title">Escolas</h5>
                 <p class="card-text">Vizualize, Cadastre, Edite ou Exclua registros de Escolas.</p>
-                <a href="./View/pages/escolaPagina.php" class="btn btn-primary">Ir para Escolas</a>
+                <a href=<?php echo $link_escolaPagina ?> class="btn btn-primary">Ir para Escolas</a>
             </div>
         </div>
         <div class="card" style="width: fit-content; margin: 2%;">
@@ -23,7 +23,7 @@ require_once './View/header.php';
             <div class="card-body">
                 <h5 class="card-title">Alunos</h5>
                 <p class="card-text">Vizualize, Cadastre, Edite ou Exclua registros de Alunos.</p>
-                <a href="./View/pages/alunoPagina.php" class="btn btn-primary">Ir para Alunos</a>
+                <a href=<?php echo $link_alunoPagina ?> class="btn btn-primary">Ir para Alunos</a>
             </div>
         </div>
         <div class="card" style="width: fit-content; margin: 2%;">
@@ -31,7 +31,7 @@ require_once './View/header.php';
             <div class="card-body">
                 <h5 class="card-title">Turmas</h5>
                 <p class="card-text">Vizualize, Cadastre, Edite ou Exclua registros de Turmas.</p>
-                <a href="./View/pages/turmaPagina.php" class="btn btn-primary">Ir para Turmas</a>
+                <a href=<?php echo $link_turmaPagina ?> class="btn btn-primary">Ir para Turmas</a>
             </div>
         </div>
     </div>

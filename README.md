@@ -29,7 +29,7 @@
         • Cadastro de escolas Abaixo os requisitos da funcionalidade:
             - Deve ter a listagem com busca, cadastro, edição e exclusão da escola.
             - Campos: ID, nome da escola, endereço.
-            - Campos obrigatórios: ID, Data e Situação.
+            - Campos obrigatórios: ID, Nome e Situação.
             - Uma escola deve:
                 ◦ Ter várias turmas.
                 ◦ Exibir o total de alunos.

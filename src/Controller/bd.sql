@@ -34,13 +34,22 @@ CREATE TABLE IF NOT EXISTS db_teste.tb_turma ( /*Tabela de Turmas*/
 INSERT INTO db_teste.tb_aluno (nome, nascimento, telefone, email, genero)
 VALUES('Thomas Adam da Costa', '1995-07-17', 35999736887, 'adam.thomascosta@gmail.com','Masculino');
 
+INSERT INTO db_teste.tb_aluno (nome, nascimento, telefone, email, genero)
+VALUES('José Genérico', '2000-01-01', 35999999999, 'jose@gmail.com','Masculino');
+
 /*Inserção de Escolas Padrão*/
 INSERT INTO db_teste.tb_escola (nome,endereco, situacao)
 VALUES('Colégio A', 'Rua 1, 01', 'Ativo');
 
+INSERT INTO db_teste.tb_escola (nome,endereco, situacao)
+VALUES('Colégio B', 'Rua 2, 02', 'Ativo');
+
 /*Inserção de Turma Padrão*/
 INSERT INTO db_teste.tb_turma (ano, nivel, serie, turno, idEscola)
-VALUES(2010, 'Técnico', 'Ténico em Administração','Matutino', 1);
+VALUES(2010, 'Ensino Médio', '8','Matutino', 1);
+
+INSERT INTO db_teste.tb_turma (ano, nivel, serie, turno, idEscola)
+VALUES(2010, 'Fundamental', '2','Vespertino', 2);
 
 CREATE TABLE IF NOT EXISTS db_teste.tb_AlunoTurma ( /*Tabela de Alunos de Turmas*/
     idAlunoTurma INT(11) NOT NULL AUTO_INCREMENT,
@@ -54,3 +63,5 @@ CREATE TABLE IF NOT EXISTS db_teste.tb_AlunoTurma ( /*Tabela de Alunos de Turmas
 /*Inserção de Aluno de Turma Padrão*/
 INSERT INTO db_teste.tb_AlunoTurma(idAluno, idTurma)
 VALUES(1, 1);
+INSERT INTO db_teste.tb_AlunoTurma(idAluno, idTurma)
+VALUES(2, 2);

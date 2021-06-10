@@ -1,13 +1,13 @@
 <?php
 class BD_teste
 {
-    private $database = "bd_teste"; // nome do banco
+    private $database = "db_teste"; // nome do banco
     private $host = "localhost"; // nome do host
     private $user = "root";// usuario do banco
     private $senha_user = ""; // senha do usuario
-    private $conn= new PDO("mysql:dbname=$this->database;host=$this->host", "$this->user", "$this->senha_user");
+    private $conn;
     
-    private $tables = array('aluno'=>'tb_aluno','escola'=>'tb_escola', 'turma'=>'tb_turma', 'alunoturma'=>'tb_AlunoTurma'); // nomes das tabelas com indice
+    private $tables = array('aluno'=>'.tb_aluno','escola'=>'.tb_escola', 'turma'=>'.tb_turma', 'alunoturma'=>'.tb_AlunoTurma'); // nomes das tabelas com indice
 
     public function getDatabase() //get nome do Banco
     {
@@ -23,6 +23,11 @@ class BD_teste
     }
 
     //funções CRUD
+
+    public function __construct()
+    {
+        $this->conn = new PDO("mysql:dbname=$this->database;host=$this->host", "$this->user", "$this->senha_user");
+    }
 
     //Funções Escola
     public function saveEscola($escola) //adicionar Escola no Banco de Dados
@@ -66,19 +71,87 @@ class BD_teste
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $results;
     }
-    public function listEscola($atr) //Lista todas as Escolas do Banco de Dados
+    public function searchExactlyEscola($busca, $atr) //Pesquisa 'busca' no Banco na coluna 'atr' 
     {
         $stmt = $this->conn->prepare(
             "SELECT * FROM ".$this->database.$this->tables['escola'].
-            " ORDER BY $atr"
+            " WHERE $atr = '$busca'"
         );
         $stmt->execute();
 
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $results;
     }
+
+    //Funções Aluno
+    public function saveAluno($aluno) //adicionar Aluno no Banco de Dados
+    {
     
+    }
+    public function updateAluno($aluno) //atualizar Aluno no Banco de Dados
+    {
+        
+    }
+    public function removeAluno($aluno) //deleta Aluno do Banco de Dados
+    {
 
+    }
+    public function searchAluno($busca, $atr) //Pesquisa 'busca' no Banco na coluna 'atr' 
+    {
+        $stmt = $this->conn->prepare(
+            "SELECT * FROM ".$this->database.$this->tables['aluno'].
+            " WHERE $atr LIKE '%$busca%'"
+        );
+        $stmt->execute();
 
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $results;
+    }
+    public function searchExactlyAluno($busca, $atr) //Pesquisa  exatamente 'busca' no Banco na coluna 'atr' 
+    {
+        $stmt = $this->conn->prepare(
+            "SELECT * FROM ".$this->database.$this->tables['aluno'].
+            " WHERE $atr = '$busca'"
+        );
+        $stmt->execute();
+
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $results;
+    }
+    //Funções Turma
+    public function saveTurma($turma) //adicionar Turma no Banco de Dados
+    {
+    
+    }
+    public function updateTurma($turma) //atualizar Turma no Banco de Dados
+    {
+        
+    }
+    public function removeTurma($turma) //deleta Turma do Banco de Dados
+    {
+
+    }
+    public function searchTurma($busca, $atr) //Pesquisa 'busca' no Banco na coluna 'atr' 
+    {
+        $stmt = $this->conn->prepare(
+            "SELECT * FROM ".$this->database.$this->tables['turma'].
+            " WHERE $atr LIKE '%$busca%'"
+        );
+        $stmt->execute();
+
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $results;
+    }
+    public function searchExactlyTurma($busca, $atr) //Pesquisa 'busca' no Banco na coluna 'atr' 
+    {
+        $stmt = $this->conn->prepare(
+            "SELECT * FROM ".$this->database.$this->tables['turma'].
+            " WHERE $atr = '$busca'"
+        );
+        $stmt->execute();
+
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $results;
+    }
 
 }

@@ -5,6 +5,9 @@ $link_home = "./index.php";
 $link_escolaPagina = './View/pages/escolaPagina.php';
 $link_alunoPagina = './View/pages/alunoPagina.php';
 $link_turmaPagina = './View/pages/turmaPagina.php';
+$link_formEscola = './View/pages/formEscola.php';
+$link_formAluno = './View/pages/formAluno.php';
+$link_formTurma = './View/pages/formTurma.php';
 ?>
 <?php
 require_once './View/header.php';

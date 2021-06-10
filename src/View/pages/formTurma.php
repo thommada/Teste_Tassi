@@ -1,5 +1,5 @@
 <?php
-$title = "Cadastro Educação - Turma";
+$title = "Cadastro Educação - Formulário Turma";
 
 $icon_aba = "../imgs/icons/icon_aba.png";
 

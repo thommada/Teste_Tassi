@@ -8,17 +8,28 @@ class Escola
     private $situacao; // Situação da Escola
 
     // Funções
-    public function save()
-    { // salvar uma escola no Banco de Dados
-
+    public function __construct($nome, $endereco, $situacao) //construtor
+    {
+        if (($nome != NULL) && ($situacao != NULL)) {
+            $this->setNome($nome);
+            $this->setEndereco($endereco);
+            $this->setSituacao($situacao);
+            return true;
+        }
+        return false;
     }
-    public function update()
-    { // atualizar uma escola no Banco de Dados
-
+    public function update($nome, $endereco, $situacao)
+    {
+        if (($nome != NULL) && ($situacao != NULL)) {
+            $this->setNome($nome);
+            $this->setEndereco($endereco);
+            $this->setSituacao($situacao);
+            return true;
+        }
+        return false;
     }
     public function remove()
-    { // remover uma escola do Banco de Dados
-
+    {
     }
     public function list()
     { // buscar/listar escolas do Banco de Dados
@@ -39,12 +50,12 @@ class Escola
 
     //Getters e Setters
     // ID
-    public function getId():int
+    public function getId(): int
     { // getter ID
         return $this->id;
     }
     // Nome da Escola
-    public function getnome():string
+    public function getnome(): string
     { // getter nome da escola
         return $this->nome;
     }
@@ -53,7 +64,7 @@ class Escola
         $this->nome = $nome;
     }
     // Endereço da Escola
-    public function getEndereco():string
+    public function getEndereco(): string
     { // getter endereço
         return $this->endereco;
     }
@@ -62,7 +73,7 @@ class Escola
         $this->endereco = $endereco;
     }
     // Situação
-    public function getSituacao():string
+    public function getSituacao(): string
     { // getter Situação
         return $this->situacao;
     }

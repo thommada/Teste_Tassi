@@ -8,33 +8,6 @@ class Turma
     private $serie; // Série da Turma
     private $turno; // Turno da Turma
 
-    // Funções
-    public function save()
-    { // salvar uma turma no Banco de Dados
-
-    }
-    public function update()
-    { // atualizar uma turma no Banco de Dados
-
-    }
-    public function remove()
-    { // remover uma turma do Banco de Dados
-
-    }
-    public function list()
-    { // buscar/listar turmas do Banco de Dados
-
-    }
-    public function listAlunos()
-    { // buscar/listar alunos daquela turma do Banco de Dados
-
-    }
-    public function countAlunos()
-    { // contar alunos daquela escola do Banco de Dados
-
-    }
-
-
     //Getters e Setters
     //ID
     public function getId():int

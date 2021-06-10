@@ -4,33 +4,10 @@ class Aluno
 {
     private $id; // ID de Aluno
     private $nome; // Nome Completo do Aluno
-    private $nascimento; // Data de Nascimento (day, month, year)
+    private $nascimento; // Data de Nascimento (year-month-day)
     private $telefone; // Telefone 
     private $email; // E-mail
     private $genero; // Gênero
-
-    // Funções
-    public function save()
-    { // salvar um aluno no Banco de Dados
-        
-    }
-    public function update()
-    { // atualizar um aluno no Banco de Dados
-
-    }
-    public function remove()
-    { // remover um aluno do Banco de Dados
-
-    }
-    public function list()
-    { // buscar/listar alunos do Banco de Dados
-
-    }
-    public function listTurmas()
-    { // buscar/listar turmas que o aluno está matriculado
-
-    }
-
 
     //Getters e Setters
     // ID
@@ -53,13 +30,9 @@ class Aluno
 
         return $this->nascimento;
     }
-    public function setNascimento($day, $month, $year)
-    { // setter nascimento
-        $this->nascimento = array(
-            'd' => $day,
-            'm' => $month,
-            'y' => $year
-        );
+    public function setNascimento($nascimento)
+    { // setter nascimento (YYYY-MM-DD)
+        $this->nascimento = $nascimento;
     }
     // Telefone
     public function getTelefone()

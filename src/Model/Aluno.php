@@ -9,11 +9,30 @@ class Aluno
     private $email; // E-mail
     private $genero; // Gênero
 
+    // Funções
+    public function __construct($nome, $email, $nascimento, $telefone, $genero) //contrutor do modelo
+    {
+        if (($nome != NULL) && ($email != NULL)) {
+            $this->setNome($nome);
+            $this->setEmail($email);
+            $this->setNascimento($nascimento);
+            $this->setTelefone($telefone);
+            $this->setGenero($genero);
+
+            return true;
+        }
+        return false;
+        
+    }
     //Getters e Setters
     // ID
     public function getId():int
     { // getter ID
         return $this->id;
+    }
+    public function setId($id)
+    { //setter id
+        $this->id = $id;
     }
     // Nome do Aluno
     public function getNome():string

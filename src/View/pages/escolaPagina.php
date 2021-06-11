@@ -9,7 +9,7 @@ $link_alunoPagina = './alunoPagina.php';
 $link_turmaPagina = './turmaPagina.php';
 $link_verEscola = './verEscola.php';
 $link_formEscola = './formEscola.php';
-
+$link_excluirEscola= './excluirEscola.php';
 ?>
 <?php require_once '../header.php'; ?>
 
@@ -67,7 +67,7 @@ $link_formEscola = './formEscola.php';
                         }
 
                         foreach ($results as $result) { //form de busca
-                            echo "<form method='get'>";
+                            echo "<form method='GET'>";
                             echo "<tr>";
                             echo "<td name='id'>" . $result["idEscola"] . "</td>";
                             echo "<td>" . $result["nome"] . "</td>";
@@ -76,7 +76,7 @@ $link_formEscola = './formEscola.php';
                             echo "<td class='actions'>" .
                                 "<a class='btn btn-success btn-xs' href='" . $link_verEscola . "?idEscola=" . $result['idEscola'] . "'>Visualizar</a>" .
                                 "<a class='btn btn-warning btn-xs' href='" . $link_formEscola . "?idEscola=" . $result['idEscola'] . "'>Editar</a>" .
-                                "<a class='btn btn-danger btn-xs' href='" . $link_verEscola . "?idEscola=" . $result['idEscola'] . "'>Excluir</a>" .
+                                "<a class='btn btn-danger btn-xs' href='" . $link_excluirEscola . "?idEscola=" . $result['idEscola'] . "'>Excluir</a>" .
                                 "</td>";
                             echo "</tr>";
                             echo "</form>";

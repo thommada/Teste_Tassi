@@ -9,6 +9,7 @@ $link_alunoPagina = './alunoPagina.php';
 $link_turmaPagina = './turmaPagina.php';
 $link_verAluno = './verAluno.php';
 $link_formAluno= './formAluno.php';
+$link_excluirAluno= './excluirAluno.php';
 
 ?>
 <?php require_once '../header.php'; ?>
@@ -78,7 +79,7 @@ $link_formAluno= './formAluno.php';
                             echo "<td class='actions'>" .
                                 "<a class='btn btn-success btn-xs' href='" . $link_verAluno . "?idAluno=" . $result['idAluno'] . "'>Visualizar</a>" .
                                 "<a class='btn btn-warning btn-xs' href='" . $link_formAluno . "?idAluno=" . $result['idAluno'] . "'>Editar</a>" .
-                                "<a class='btn btn-danger btn-xs' href='" . $link_verAluno . "?idAluno=" . $result['idAluno'] . "'>Excluir</a>" .
+                                "<a class='btn btn-danger btn-xs' href='" . $link_excluirAluno . "?idAluno=" . $result['idAluno'] . "'>Excluir</a>" .
                                 "</td>";
                             echo "</tr>";
                             echo "</form>";

@@ -18,44 +18,19 @@ class Escola
         }
         return false;
     }
-    public function update($nome, $endereco, $situacao)
-    {
-        if (($nome != NULL) && ($situacao != NULL)) {
-            $this->setNome($nome);
-            $this->setEndereco($endereco);
-            $this->setSituacao($situacao);
-            return true;
-        }
-        return false;
-    }
-    public function remove()
-    {
-    }
-    public function list()
-    { // buscar/listar escolas do Banco de Dados
-
-    }
-    public function listAlunos()
-    { // buscar/listar alunos daquela escola do Banco de Dados
-
-    }
-    public function countAlunos()
-    { // contar alunos daquela escola do Banco de Dados
-
-    }
-    public function listTurmas()
-    { // buscar/listar turmas daquela escola do Banco de Dados
-
-    }
 
     //Getters e Setters
     // ID
-    public function getId(): int
+    public function getId()
     { // getter ID
         return $this->id;
     }
+    public function setId($id)
+    { //setter id
+        $this->id = $id;
+    }
     // Nome da Escola
-    public function getnome(): string
+    public function getnome()
     { // getter nome da escola
         return $this->nome;
     }
@@ -64,7 +39,7 @@ class Escola
         $this->nome = $nome;
     }
     // Endereço da Escola
-    public function getEndereco(): string
+    public function getEndereco()
     { // getter endereço
         return $this->endereco;
     }
@@ -73,7 +48,7 @@ class Escola
         $this->endereco = $endereco;
     }
     // Situação
-    public function getSituacao(): string
+    public function getSituacao()
     { // getter Situação
         return $this->situacao;
     }

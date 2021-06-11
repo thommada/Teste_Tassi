@@ -34,6 +34,7 @@ require_once './View/header.php';
             <div class="card-body">
                 <h5 class="card-title">Turmas</h5>
                 <p class="card-text">Vizualize, Cadastre, Edite ou Exclua registros de Turmas.</p>
+                <p class="card-text">Matricule Alunos em Turmas</p>
                 <a href=<?php echo $link_turmaPagina ?> class="btn btn-primary">Ir para Turmas</a>
             </div>
         </div>

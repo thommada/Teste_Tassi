@@ -26,7 +26,7 @@ $escolaTurma = $bd->searchExactlyEscola($results['idEscola'], 'idEscola')[0];
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <h1 class="display-4"><strong>Nível de Ensino: </strong><?php echo $results['nivel']; ?></h1>
-                <h1 class="display-4"><strong>Série: </strong><?php echo $results['serie']; ?></h1>
+                <h1 class="display-4"><strong>Série/Período: </strong><?php echo $results['serie']; ?></h1>
                 <h3 class="lead"><strong>ID: </strong> <?php echo $results['idTurma']; ?></h3>
                 <br />
                 <h3><strong>Ano: </strong> <?php echo $results['ano']; ?></h3>

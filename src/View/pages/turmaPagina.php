@@ -7,6 +7,8 @@ $link_alunoPagina = './alunoPagina.php';
 $link_turmaPagina = './turmaPagina.php';
 $link_verTurma = './verTurma.php';
 $link_formTurma= './formTurma.php';
+$link_excluirTurma= './excluirTurma.php';
+$link_matricularTurma= './matricularTurma.php';
 
 ?>
 <?php require_once '../header.php'; ?>
@@ -34,6 +36,7 @@ $link_formTurma= './formTurma.php';
                         <option value="serie">Serie</option>
                         <option value="nivel">Nível de Ensino</option>
                         <option value="turno">Turno</option>
+                        <option value="idEscola">ID Escola</option>
                     </select>
                     <input type="search" class="form-control" name="busca" placeholder="Todas as Turmas">
                     <button type="submit" class="btn btn-primary">Buscar/Listar</button>
@@ -51,6 +54,7 @@ $link_formTurma= './formTurma.php';
                             <th>Nível de Ensino</th>
                             <th>Série</th>
                             <th>Turno</th>
+                            <th>Escola</th>
                             <th class="actions">Ações</th>
                         </tr>
                     </thead>
@@ -73,10 +77,12 @@ $link_formTurma= './formTurma.php';
                             echo "<td>" . $result["nivel"] . "</td>";
                             echo "<td>" . $result['serie'] . "</td>";
                             echo "<td>" . $result['turno'] . "</td>";
+                            echo "<td>" . $result['idEscola'] . "</td>";
                             echo "<td class='actions'>" .
                                 "<a class='btn btn-success btn-xs' href='" . $link_verTurma . "?idTurma=" . $result['idTurma'] . "'>Visualizar</a>" .
                                 "<a class='btn btn-warning btn-xs' href='" . $link_formTurma . "?idTurma=" . $result['idTurma'] . "'>Editar</a>" .
-                                "<a class='btn btn-danger btn-xs' href='" . $link_verTurma . "?idTurma=" . $result['idTurma'] . "'>Excluir</a>" .
+                                "<a class='btn btn-danger btn-xs' href='" . $link_excluirTurma . "?idTurma=" . $result['idTurma'] . "'>Excluir</a>" .
+                                "<a class='btn btn-dark btn-xs' href='" . $link_matricularTurma . "?idTurma=" . $result['idTurma'] . "'>Matricular Aluno</a>" .
                                 "</td>";
                             echo "</tr>";
                             echo "</form>";

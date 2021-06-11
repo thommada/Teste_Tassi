@@ -242,6 +242,40 @@ class BD_teste
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $results;
     }
+    public function searchAlunoTurma($idTurma)// busca linhas na tabela tb_alunoturma
+    {
+        $stmt = $this->conn->prepare(
+            "SELECT idAluno, idAlunoTurma FROM ".$this->database . $this->tables['alunoturma'] .
+            " WHERE idTurma = '$idTurma'"
+
+        );
+        $stmt->execute();
+
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $results;
+
+    }
+    public function saveAlunoTurma($idAluno, $idTurma)
+    {
+        $stmt = $this->conn->prepare(
+            "INSERT INTO " . $this->database . $this->tables['alunoturma'] .
+                " (idAluno, idTurma) 
+            VALUES ($idAluno, $idTurma)"
+
+        );
+        $stmt->execute();
+
+    }
+    public function deleteSingleAlunoTurma($idAlunoTurma)//deleta uma unica linha da tabela tb_alunoturma pelo id
+    {
+        $stmt = $this->conn->prepare(
+            "DELETE FROM " . $this->database . $this->tables['alunoturma'] .
+                " WHERE idAlunoTurma = '$idAlunoTurma'"
+        );
+        $stmt->execute();
+
+    }
+
     public function deleteAlunoTurma($id, $atr)// deleta linhas na tabela tb_alunoturma
     {
         $stmt = $this->conn->prepare(

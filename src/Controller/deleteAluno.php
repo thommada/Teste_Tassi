@@ -1,6 +1,7 @@
 <?php
 require_once './BD.php';
 $link_ = 'https://cadastroeducacao.000webhostapp.com/index.php';
+$link_retorno = '../View/pages/paginaAluno.php';
 
 $db = new BD_teste();// instancia do banco
 
@@ -8,8 +9,6 @@ $db = new BD_teste();// instancia do banco
 $db->deleteAlunoTurma($_GET['id'], 'idAluno');
 // deletar na tabela turmas
 $db->removeAluno($_GET['id']);
-    
-echo $message = "Excluído do Banco de Dados. ID: ".$_GET['id'];
 
-header("Location: $link_");
+header("Location: $link_retorno");
 die ?>

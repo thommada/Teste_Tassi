@@ -2,6 +2,7 @@
 require_once '../Model/Aluno.php';
 require_once './BD.php';
 $link_ = 'https://cadastroeducacao.000webhostapp.com/index.php';
+$link_retorno = '../View/pages/paginaAluno.php';
 
 $db = new BD_teste();// instancia do banco
 $aluno = new Aluno($_POST['nome'], $_POST['email'], $_POST['nascimento'], $_POST['telefone'], $_POST['genero']); //instancia do modelo Aluno
@@ -18,7 +19,5 @@ else
 
 }
 
-echo $message = "Salvo no Banco de Dados. ID: ".$aluno->getId();
-
-header("Location: $link_");
+header("Location: $link_retorno");
 exit ?>

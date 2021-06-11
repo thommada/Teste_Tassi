@@ -17,7 +17,5 @@ else
     $escola->setId($id);
 }
 
-echo $message = "Salvo no Banco de Dados. ID: ".$escola->getId();
-
 header("Location: $link_");
 exit ?>

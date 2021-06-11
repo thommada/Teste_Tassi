@@ -1,7 +1,7 @@
 <?php
 require_once '../Model/Turma.php';
 require_once './BD.php';
-$link_turmaPagina = '../View/pages/turmaPagina.php';
+$$link_ = 'https://cadastroeducacao.000webhostapp.com/index.php';
 
 $db = new BD_teste();// instancia do banco
 $turma = new Turma($_POST['ano'], $_POST['nivel'], $_POST['serie'], $_POST['turno'], $_POST['escola'] ); //instancia do modelo Escola
@@ -19,5 +19,5 @@ else
 
 echo $message = "Salvo no Banco de Dados. ID: ".$turma->getId();
 
-header("Location: $link_turmaPagina");
+header("Location: $link_");
 exit ?>

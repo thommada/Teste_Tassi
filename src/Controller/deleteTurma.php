@@ -1,6 +1,6 @@
 <?php
 require_once './BD.php';
-$link_turmaPagina = '../View/pages/turmaPagina.php';
+$link_ = 'https://cadastroeducacao.000webhostapp.com/index.php';
 
 $db = new BD_teste();// instancia do banco
 
@@ -11,5 +11,5 @@ $db->removeTurma($_GET['id']);
     
 echo $message = "Excluído do Banco de Dados. ID: ".$_GET['id'];
 
-header("Location: $link_turmaPagina");
+header("Location: $link_");
 die ?>

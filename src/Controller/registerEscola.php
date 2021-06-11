@@ -1,7 +1,7 @@
 <?php
 require_once '../Model/Escola.php';
 require_once './BD.php';
-$link_escolaPagina = '../View/pages/escolaPagina.php';
+$link_ = 'https://cadastroeducacao.000webhostapp.com/index.php';
 
 $db = new BD_teste();// instancia do banco
 $escola = new Escola($_POST['nome'], $_POST['endereco'], $_POST['situacao']); //instancia do modelo Escola
@@ -19,5 +19,5 @@ else
 
 echo $message = "Salvo no Banco de Dados. ID: ".$escola->getId();
 
-header("Location: $link_escolaPagina");
+header("Location: $link_");
 exit ?>

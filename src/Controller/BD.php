@@ -1,10 +1,10 @@
 <?php
 class BD_teste
 {
-    private $database = "db_teste"; // nome do banco
+    private $database = "d16988830_db_teste"; // nome do banco
     private $host = "localhost"; // nome do host
-    private $user = "root"; // usuario do banco
-    private $senha_user = ""; // senha do usuario
+    private $user = "id16988830_root"; // usuario do banco
+    private $senha_user = "1pze!~v-m3A+lO?f"; // senha do usuario
     private $conn;
 
     private $tables = array('aluno' => '.tb_aluno', 'escola' => '.tb_escola', 'turma' => '.tb_turma', 'alunoturma' => '.tb_alunoturma'); // nomes das tabelas com indice
@@ -93,7 +93,8 @@ class BD_teste
     public function listEscola() //Lista todas as escolas 
     {
         $stmt = $this->conn->prepare(
-            "SELECT * FROM db_teste.tb_escola ORDER BY nome"
+            "SELECT * FROM ". $this->database . $this->tables['escola'] .
+            " ORDER BY nome"
         );
         $stmt->execute();
 
